@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Ngọc Thanh Bá - Portfolio & Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav-content">
+            <h1 class="logo">Nguyễn Ngọc Thanh Bá</h1>
+
+            <nav class="navbar">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Giới Thiệu</a>
+                <a href="#skills" class="nav-link">Kỹ Năng</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Liên Hệ</a>
+
+                <a href="https://github.com/ThanhBaNguyen" target="_blank" rel="noopener noreferrer" class="nav-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1JUtEojzr8/" target="_blank" rel="noopener noreferrer" class="nav-link" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <p class="greeting">XIN CHÀO!</p>
+                <h2 class="title">TÔI LÀ NGUYỄN NGỌC THANH BÁ</h2>
+                <p class="subtitle">Kỹ sư Hệ thống Thông tin</p>
+
+                <p class="summary">
+                    Tôi là một kỹ sư hệ thống thông tin với niềm đam mê xây dựng ứng dụng web hiện đại.
+                    Tôi thích khám phá công nghệ, tìm hiểu cách giải quyết vấn đề và phát triển bản thân mỗi ngày.
+                </p>
+            </div>
+        </section>
+
+        <section class="blog-section" id="blog">
+            <h2 class="section-title">Blog Lập Trình – Java & JavaScript</h2>
+
+            <div class="blog-grid">
+
+                <a class="blog-card" href="post.html?id=1" data-id="1">
+                    <img src="https://i.imgur.com/1ZQZ1Zm.png" alt="Java OOP" class="blog-img">
+                    <h3 class="blog-title">1. Giới thiệu về Java – Ngôn ngữ lập trình OOP mạnh mẽ</h3>
+                    <p class="blog-desc">
+                        Java là ngôn ngữ lập trình hướng đối tượng, ổn định, chạy đa nền tảng và được dùng rộng rãi trong doanh nghiệp.
+                    </p>
+                </a>
+
+                <a class="blog-card" href="post.html?id=2" data-id="2">
+                    <img src="https://i.imgur.com/gnPpXad.jpeg" alt="JavaScript" class="blog-img">
+                    <h3 class="blog-title">2. JavaScript – Trái tim của Web hiện đại</h3>
+                    <p class="blog-desc">
+                        JavaScript giúp trang web trở nên sống động và tương tác, là nền tảng quan trọng của web.
+                    </p>
+                </a>
+
+                <a class="blog-card" href="post.html?id=3" data-id="3">
+                    <img src="https://i.imgur.com/8lqP3Qy.jpeg" alt="OOP" class="blog-img">
+                    <h3 class="blog-title">3. OOP trong Java – 4 tính chất quan trọng</h3>
+                    <p class="blog-desc">
+                        Bao gồm: đóng gói, đa hình, kế thừa và trừu tượng hóa – nền tảng để xây dựng hệ thống lớn.
+                    </p>
+                </a>
+                
+                <a class="blog-card" href="post.html?id=4" data-id="4">
+                    <img src="https://i.imgur.com/wd0zMqc.jpeg" alt="Arrow Function" class="blog-img">
+                    <h3 class="blog-title">4. Arrow Function trong JavaScript</h3>
+                    <p class="blog-desc">
+                        Cú pháp ngắn gọn, dễ đọc và giúp xử lý “this” rõ ràng hơn so với function truyền thống.
+                    </p>
+                </a>
+
+                <a class="blog-card" href="post.html?id=5" data-id="5">
+                    <img src="https://i.imgur.com/PrY0ZLb.jpeg" alt="Vòng lặp Java" class="blog-img">
+                    <h3 class="blog-title">5. Vòng lặp cơ bản trong Java</h3>
+                    <p class="blog-desc">
+                        Java có các vòng lặp for, while, do-while giúp xử lý dữ liệu linh hoạt theo từng nhu cầu.
+                    </p>
+                </a>
+
+                <a class="blog-card" href="post.html?id=6" data-id="6">
+                    <img src="https://i.imgur.com/xEwUepl.jpeg" alt="DOM JS" class="blog-img">
+                    <h3 class="blog-title">6. DOM trong JavaScript</h3>
+                    <p class="blog-desc">
+                        DOM cho phép JS truy cập và thay đổi cấu trúc HTML để tạo trang web động.
+                    </p>
+                </a>
+
+                <a class="blog-card" href="post.html?id=7" data-id="7">
+                    <img src="https://i.imgur.com/6TfCZOG.jpeg" alt="Exception Handling" class="blog-img">
+                    <h3 class="blog-title">7. Exception Handling trong Java</h3>
+                    <p class="blog-desc">
+                        try – catch – finally giúp xử lý lỗi và đảm bảo chương trình hoạt động ổn định.
+                    </p>
+                </a>
+
+                <a class="blog-card" href="post.html?id=8" data-id="8">
+                    <img src="https://i.imgur.com/YmYr1cU.jpeg" alt="Async Await" class="blog-img">
+                    <h3 class="blog-title">8. Async/Await trong JavaScript</h3>
+                    <p class="blog-desc">
+                        Giúp xử lý bất đồng bộ dễ đọc, đơn giản và hiệu quả hơn so với callback.
+                    </p>
+                </a>
+
+                <a class="blog-card" href="post.html?id=9" data-id="9">
+                    <img src="https://i.imgur.com/K4f9mMh.jpeg" alt="Java vs JavaScript" class="blog-img">
+                    <h3 class="blog-title">9. Java vs JavaScript – Khác biệt hoàn toàn</h3>
+                    <p class="blog-desc">
+                        Một bên dùng cho doanh nghiệp, một bên dùng cho web – khác nhau về mục tiêu lẫn cú pháp.
+                    </p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
