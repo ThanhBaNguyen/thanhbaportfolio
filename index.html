@@ -137,40 +137,28 @@
             <p class="section-subtitle">Những chứng chỉ chuyên nghiệp và thành tựu đáng tự hào</p>
 
             <div class="certificates-grid">
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="certificate-label">HUTECH</div>
-                    <h4 class="certificate-title">Chứng chỉ Kỹ năng Giao tiếp và Làm việc Nhóm</h4>
-                    <p class="certificate-date">Verified 06/2025</p>
-                </div>
-
                 <div class="certificate-card">
                     <div class="certificate-image">
-                        <i class="fas fa-certificate"></i>
+                        <img src="assets/chungchi1.png" alt="Chứng chỉ 1" class="cert-img">
                     </div>
-                    <div class="certificate-label">CISCO NETWORKING ACADEMY</div>
-                    <h4 class="certificate-title">Networking Basics - Cisco Networking Academy</h4>
-                    <p class="certificate-date">Verified 11/2025</p>
+                    <h4 class="certificate-title">JavaScript Essentials 1</h4>
+                    <p class="certificate-label">Cisco Networking Academy</p>
                 </div>
 
                 <div class="certificate-card">
                     <div class="certificate-image">
-                        <i class="fas fa-certificate"></i>
+                        <img src="assets/chungchi2.png" alt="Chứng chỉ 2" class="cert-img">
                     </div>
-                    <div class="certificate-label">CISCO NETWORKING ACADEMY & JIS INSTITUTE</div>
-                    <h4 class="certificate-title">JavaScript Essentials 2 - Cisco Networking Academy</h4>
-                    <p class="certificate-date">Verified 12/2025</p>
+                    <h4 class="certificate-title">JavaScript Essentials 2</h4>
+                    <p class="certificate-label">Cisco Networking Academy & JIS Institute</p>
                 </div>
 
                 <div class="certificate-card">
                     <div class="certificate-image">
-                        <i class="fas fa-certificate"></i>
+                        <img src="assets/chungchi3.png" alt="Chứng chỉ 3" class="cert-img">
                     </div>
-                    <div class="certificate-label">CISCO NETWORKING ACADEMY</div>
-                    <h4 class="certificate-title">Java Essentials 1 - Cisco Networking Academy</h4>
-                    <p class="certificate-date">Verified 11/2025</p>
+                    <h4 class="certificate-title">Networking Basics</h4>
+                    <p class="certificate-label">Cisco Networking Academy</p>
                 </div>
     </div>
 </section>
@@ -338,5 +326,47 @@
                 <p>© 2025 Nguyễn Ngọc Thanh Bá - Bản quyền được bảo lưu.</p>
             </div>
         </div>
-    </footer></body>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Lightbox functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close');
+        const certImages = document.querySelectorAll('.cert-img');
+
+        certImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalImg.src = this.src;
+            });
+            img.style.cursor = 'pointer';
+        });
+
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
 </html>

@@ -779,10 +779,28 @@ a:hover {
     z-index: 1;
     transition: transform 0.3s ease;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.cert-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .certificate-card:hover .certificate-image {
     transform: scale(1.1) rotate(5deg);
+}
+
+.certificate-card:hover .cert-img {
+    transform: scale(1.05);
 }
 
 .certificate-label {
@@ -1515,6 +1533,84 @@ a:hover {
 .btn-back:hover {
     background: var(--hover-effect);
     transform: translateX(-5px);
+}
+
+/* ===== LIGHTBOX MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: zoomIn 0.3s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: translateY(-50%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+#modalImage {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2001;
+}
+
+.close:hover,
+.close:focus {
+    background: var(--primary-color);
+    color: #000;
+    transform: scale(1.1);
 }
 
 /* ===== MOBILE RESPONSIVE IMPROVEMENTS ===== */
