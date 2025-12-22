@@ -51,7 +51,7 @@
                     <p class="stat-desc">Hoàn Thành</p>
                 </div>
                 <div class="stat-card stat-card-2">
-                    <h3 class="stat-number">3</h3>
+                    <h3 class="stat-number">5</h3>
                     <p class="stat-label">Chứng Chỉ</p>
                     <p class="stat-desc">Chuyên Nghiệp</p>
                 </div>
@@ -74,32 +74,32 @@
                             <div class="skill-item">
                                 <span class="skill-name">Java</span>
                                 <div class="skill-bar"><div class="skill-progress skill-95"></div></div>
-                                <span class="skill-level">90%</span>
+                                <span class="skill-level">80%</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">JavaScript</span>
                                 <div class="skill-bar"><div class="skill-progress skill-85"></div></div>
-                                <span class="skill-level">75%</span>
+                                <span class="skill-level">70%</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">SQL & Database</span>
                                 <div class="skill-bar"><div class="skill-progress skill-90"></div></div>
-                                <span class="skill-level">90%</span>
+                                <span class="skill-level">85%</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">HTML & CSS</span>
                                 <div class="skill-bar"><div class="skill-progress skill-88"></div></div>
-                                <span class="skill-level">88%</span>
+                                <span class="skill-level">80%</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Python</span>
                                 <div class="skill-bar"><div class="skill-progress skill-80"></div></div>
-                                <span class="skill-level">75%</span>
+                                <span class="skill-level">70%</span>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Web Development</span>
                                 <div class="skill-bar"><div class="skill-progress skill-87"></div></div>
-                                <span class="skill-level">87%</span>
+                                <span class="skill-level">85%</span>
                             </div>
                         </div>
                     </div>
@@ -159,6 +159,22 @@
                     </div>
                     <h4 class="certificate-title">Networking Basics</h4>
                     <p class="certificate-label">Cisco Networking Academy</p>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="assets/chungchi4.jpg" alt="Gemini Certified Student" class="cert-img">
+                    </div>
+                    <h4 class="certificate-title">Gemini Certified Student</h4>
+                    <p class="certificate-label">Google for Education</p>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="assets/chungchi5.jpg" alt="Gemini Certified Educator" class="cert-img">
+                    </div>
+                    <h4 class="certificate-title">Gemini Certified Educator</h4>
+                    <p class="certificate-label">Google for Education</p>
                 </div>
     </div>
 </section>
@@ -367,6 +383,32 @@
                 modal.style.display = 'none';
             }
         });
+
+        // Update active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function updateActiveNavLink() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+        updateActiveNavLink();
     </script>
 </body>
 </html>
